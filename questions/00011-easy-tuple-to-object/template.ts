@@ -2,6 +2,10 @@
 //   [K in T[number]]: K
 // }
 
-type TupleToObject<T extends ReadonlyArray<string | number | symbol>> = {
+// type TupleToObject<T extends ReadonlyArray<string | number | symbol>> = {
+//   [K in T[number]]: K
+// }
+
+type TupleToObject<T extends ReadonlyArray<keyof any>> = {
   [K in T[number]]: K
 }
